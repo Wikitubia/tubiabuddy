@@ -1,9 +1,13 @@
-# <p align="center">TubiaBuddy</p>
+# <div align="center">TubiaBuddy</div>
+
+<div align="center">
 
 ![Google Chrome](https://img.shields.io/badge/Google_Chrome-4285F4?style=flat-square&logo=GoogleChrome&logoColor=white)
 ![GitHub Issues](https://img.shields.io/github/issues/Wikitubia/tubiabuddy?style=flat-square)
 ![GitHub Tag](https://img.shields.io/github/v/tag/Wikitubia/tubiabuddy?style=flat-square)
 ![GitHub License](https://img.shields.io/github/license/Wikitubia/tubiabuddy?style=flat-square)
+
+</div>
 
 **TubiaBuddy** is a utility extension geared for Wikitubia editors, but can work for anyone.
 

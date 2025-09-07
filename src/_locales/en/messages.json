@@ -1,0 +1,62 @@
+{
+	"not_in_youtube_title": {
+		"message": "You're not in YouTube",
+		"description": "Title for the 'Not in YouTube' prompt"
+	},
+	"not_in_youtube_desc": {
+		"message": "For security purposes, the extension will only run in a secure YouTube context.",
+		"description": "Description for the 'Not in YouTube' prompt"
+	},
+	"not_in_channel_page_title": {
+		"message": "You're not in a channel page",
+		"description": "Title for the 'Not in channel page' prompt"
+	},
+	"not_in_channel_page_desc": {
+		"message": "Head to a channel's page to get started.",
+		"description": "Description for the 'Not in channel page' prompt"
+	},
+	"copy_to_clipboard": {
+		"message": "Copy to clipboard",
+		"description": "Button text for copying to clipboard"
+	},
+	"status_copied_to_clipboard": {
+		"message": "Copied to clipboard",
+		"description": "Status message after copying to clipboard"
+	},
+	"status_ready": {
+		"message": "Ready",
+		"description": "Status message when ready"
+	},
+	"status_await": {
+		"message": "Awaiting",
+		"description": "Status message when awaiting action"
+	},
+	"footer_report_bugs": {
+		"message": "Report bugs:",
+		"description": "Footer text for bug reporting"
+	},
+	"error_invalid_url": {
+		"message": "Invalid URL. Please navigate to a channel page.",
+		"description": "Error message for invalid URL prompt"
+	},
+	"loading": {
+		"message": "Loading",
+		"description": "Loading status message"
+	},
+	"databox_unknown_value": {
+		"message": "Unknown/invalid value",
+		"description": "Databox fallback value for unknown/invalid data"
+	},
+	"databox_channel_url": {
+		"message": "Channel URL",
+		"description": "Label for channel URL in databox"
+	},
+	"databox_channel_url_type": {
+		"message": "Channel URL type",
+		"description": "Label for channel URL type in databox"
+	},
+	"open_youtube": {
+		"message": "Open YouTube",
+		"description": "Button text to open YouTube"
+	}
+}

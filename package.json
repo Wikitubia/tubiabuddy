@@ -1,0 +1,26 @@
+{
+  "name": "tubiabuddy",
+  "author": {
+    "name": "headquarter8302",
+    "url": "https://headquarter8302.github.io"
+  },
+  "license": "MIT",
+  "version": "0.1.0",
+  "description": "A utility extension for Wikitubia editors. Provides quick data viewing and copying, plus some other niceties",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/chrome": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.3.1",
+    "log-symbols": "^7.0.1",
+    "preact": "^10.27.1"
+  },
+  "scripts": {
+    "build-dev": "scripts/build-dev.ts",
+    "build": "scripts/build.ts"
+  }
+}

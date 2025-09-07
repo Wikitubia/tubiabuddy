@@ -1,0 +1,44 @@
+# <center>TubiaBuddy</center>
+
+<center>
+
+![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=flat-square&logo=GoogleChrome&logoColor=white)
+![GitHub Issues](https://img.shields.io/github/issues/wikitubia/tubiabuddy?style=flat-square)
+![GitHub Release](https://img.shields.io/github/v/release/wikitubia/tubiabuddy?style=flat-square)
+![GitHub License](https://img.shields.io/github/license/wikitubia/tubiabuddy?style=flat-square)
+
+</center>
+
+**TubiaBuddy** is a utility extension geared for Wikitubia editors, but can work for anyone.
+
+Currently it only supports Google Chrome's extension API and manifest, but support for the other three major browsers (Edge, Safari, Firefox) are planned.
+
+## Features
+
+1. Automatic template type detection
+2. One-click copy
+3. more to be added
+
+## Development
+
+Clone the repository to your device. An environment with Chrome is needed for testing and packaging the extension.
+
+To install dependencies:
+
+```bash
+bun install
+```
+
+Building a dev output:
+
+```bash
+bun run build-dev
+```
+
+Building a production output:
+
+```bash
+bun run build
+```
+
+All build output is put into the `src/out` directory.

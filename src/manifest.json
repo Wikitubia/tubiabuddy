@@ -1,0 +1,28 @@
+{
+	"$schema": "https://www.schemastore.org/chrome-manifest.json",
+	"name": "TubiaBuddy",
+	"description": "A utility extension for Wikitubia editors. Provides quick data viewing and copying, plus some other niceties",
+	"version": "0.1.0",
+	"default_locale": "en",
+	"manifest_version": 3,
+	"incognito": "split",
+	"homepage_url": "https://github.com/Wikitubia/tubiabuddy",
+	"action": {
+		"default_popup": "/popup.html",
+		"default_icon": {
+			"16": "/assets/icons/icon.png",
+			"32": "/assets/icons/icon.png",
+			"48": "/assets/icons/icon.png",
+			"128": "/assets/icons/icon.png"
+		}
+	},
+	"host_permissions": [
+		"https://*.youtube.com/*",
+		"https://youtube.com/*"
+	],
+	"permissions": [
+		"activeTab",
+		"scripting"
+	],
+	"key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCyF99J919jY+2xVsSWXLqrTCMr4Eehk1gjnAkWI1Fx3m7SprPkcdBnUYLsq24Ydv6vnizIAwWjBUO6V5MOR9nSh2EG2VE7QoZE96qh+GFvRb/ECVVyrp8rp7dYeM1fezdJaau2Z3G040HciV+vsYt38s+ngzp+WxuVLGcvjkc/OoBtJY1qkgOTEpF6Pln1KMMQ3QGiJalF6TgU3r355Y12sGQ1aIjjHEgDRjQudjfHPC88wcRviCDkTQRGnF1j+xulzlpRUZAb+MLPfnRk65r13Oj+aGgpan/rXnUoY1KQhESBMCm/6zPQHOR7GgNGIzJTs+PhBlpmRYD5mQtidLZ1"
+}

@@ -1,5 +1,6 @@
 import { Status } from "src/popup";
 import { Signal, signal } from "@preact/signals";
+import { TailSpin } from "react-loader-spinner";
 
 interface LoadingComponentProps { }
 
@@ -21,13 +22,15 @@ export const HideLoader: Signal = signal(false);
 export default function Loading(props: LoadingComponentProps) {
 	Status.value = chrome.i18n.getMessage('status_await');
 
+	const loaderElem = <div id="loading-modal">
+		<TailSpin color="#ff0000" wrapperClass="spinner" width={ 40 } height={ 40 } />
+		<div className="loading-modal-text">{ chrome.i18n.getMessage("loading") }</div>
+	</div>
+
 	return (HideLoader)
 		? (
 			Status.value = chrome.i18n.getMessage("status_ready"),
 			null
 		)
-		: <div id="loading-modal">
-			<div className="spinner"></div>
-			<div className="loading-modal-text">{ chrome.i18n.getMessage("loading") }</div>
-		</div>
+		: loaderElem
 }

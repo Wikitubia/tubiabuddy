@@ -6,6 +6,7 @@ Bun.build({
 	],
 	outdir: 'src/out',
 	target: 'browser',
+	minify: true
 }).then((output) => {
 	if (output.success) {
 		console.log("Build logs:");

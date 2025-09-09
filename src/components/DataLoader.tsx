@@ -98,7 +98,7 @@ export default function DataLoader(props: DataLoaderComponentProps) {
 	for (const [key, value] of channelMeta.entries()) {
 		// if value is nullish, don't leave it empty
 		componentOutput.push(
-			createDataBox(key, value ?? chrome.i18n.getMessage("databox_unknown_value"))
+			createDataBox(key, value ?? chrome.i18n.getMessage("generic_unknown_value"))
 		);
 	}
 

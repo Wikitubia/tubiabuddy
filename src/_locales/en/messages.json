@@ -43,9 +43,9 @@
 		"message": "Loading",
 		"description": "Loading status message"
 	},
-	"databox_unknown_value": {
+	"generic_unknown_value": {
 		"message": "Unknown/invalid value",
-		"description": "Databox fallback value for unknown/invalid data"
+		"description": "Generic text for unknown/invalid data"
 	},
 	"databox_channel_url": {
 		"message": "Channel URL",

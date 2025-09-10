@@ -1,8 +1,20 @@
+<div align="center">
+
+<img src="https://github.com/Wikitubia/tubiabuddy/raw/refs/heads/main/src/assets/icons/icon.svg" alt="logo" width="100"/>
+
+</div>
+
 # <div align="center">TubiaBuddy</div>
 
 <div align="center">
 
 ![Google Chrome](https://img.shields.io/badge/Google_Chrome-4285F4?style=flat-square&logo=GoogleChrome&logoColor=white)
+![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=Brave&logoColor=white)
+
+</div>
+
+<div align="center">
+
 ![GitHub Issues](https://img.shields.io/github/issues/Wikitubia/tubiabuddy?style=flat-square)
 ![GitHub Tag](https://img.shields.io/github/v/tag/Wikitubia/tubiabuddy?style=flat-square)
 ![GitHub License](https://img.shields.io/github/license/Wikitubia/tubiabuddy?style=flat-square)

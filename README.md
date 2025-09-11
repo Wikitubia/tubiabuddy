@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/Wikitubia/tubiabuddy/raw/refs/heads/main/src/assets/icons/icon.svg" alt="logo" width="100"/>
+<img src="https://github.com/Wikitubia/tubiabuddy/raw/refs/heads/main/src/assets/icons/icon.svg" alt="Logo" width="100"/>
 
 </div>
 
@@ -8,8 +8,8 @@
 
 <div align="center">
 
-![Google Chrome](https://img.shields.io/badge/Google_Chrome-4285F4?style=flat-square&logo=GoogleChrome&logoColor=white)
-![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=Brave&logoColor=white)
+| ![Google Chrome](https://img.shields.io/badge/Google_Chrome-4285F4?style=flat-square&logo=GoogleChrome&logoColor=white) | ![Brave](https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=Brave&logoColor=white) |
+| - | - |
 
 </div>
 
@@ -23,7 +23,11 @@
 
 **TubiaBuddy** is a utility extension geared for Wikitubia editors, but can work for anyone.
 
-Currently it only supports Google Chrome's extension API and manifest, but support for the other three major browsers (Edge, Safari, Firefox) are planned.
+## Compatibility
+
+The extension is confirmed to work with Chrome and Brave, but explicit support for other browsers haven't been implemented. If your browser supports the latest [WebExtensions API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions), and/or aliases the `chrome` namespace into `browser`, you should be able to use this extension without any hitches.
+
+If you encounter any issues that may relate to compatibility, please file an isssue.
 
 ## Features
 
@@ -32,6 +36,8 @@ Currently it only supports Google Chrome's extension API and manifest, but suppo
 3. more to be added
 
 ## Development
+
+This project uses [Bun](https://bun.sh) as the package manager, script runner, and bundler. It isn't strictly necessary to use Bun while making changes to the repo, but please do know that we use [Bun-exclusive APIs for the build process](/scripts/).
 
 Clone the repository to your device. An environment with Chrome is needed for testing and packaging the extension.
 
@@ -53,4 +59,4 @@ Building a production output:
 bun run build
 ```
 
-All build output is put into the `src/out` directory.
+All build output is put into the `src/out` directory, which is also the directory that the packaged extension will access to do its work.

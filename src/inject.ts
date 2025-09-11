@@ -1,4 +1,4 @@
-import { Log, type InjectReturnResult } from "./util";
+import { type InjectReturnResult } from "./util";
 
 const enum ElementSelectors {
 	ChannelName = "h1.dynamicTextViewModelH1 > span[role=\"text\"]",
@@ -6,10 +6,10 @@ const enum ElementSelectors {
 	// ChannelJoinDate = "#additional-info-container > table > tbody > tr:nth-child(5) > td:nth-child(2) > yt-attributed-string > span > span"
 }
 
-export default function InjectionScript() {
-	Log.success("[inject] TubiaBuddy successfully injected!");
+function InjectionScript() {
+	console.debug("[inject] TubiaBuddy successfully injected!");
 
-	Log.debug("[inject] Getting page contents");
+	console.debug("[inject] Getting page contents");
 
 	let result: Partial<InjectReturnResult> = {
 		channelDisplayName: (document.querySelector(ElementSelectors.ChannelName) as HTMLSpanElement)?.innerText,
@@ -18,3 +18,5 @@ export default function InjectionScript() {
 	};
 	return result;
 }
+
+InjectionScript();

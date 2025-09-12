@@ -5,8 +5,8 @@
     "url": "https://headquarter8302.github.io"
   },
   "license": "MIT",
-  "version": "0.1.0",
-  "description": "A utility extension for Wikitubia editors. Provides quick data viewing and copying, plus some other niceties",
+  "version": "0.1.1",
+  "description": "A utility extension for Wikitubia editors",
   "devDependencies": {
     "@types/bun": "latest",
     "@types/chrome": "latest"

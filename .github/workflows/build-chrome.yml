@@ -45,6 +45,7 @@ jobs:
       - name: "Package extension source"
         id: 'pack_extension_source'
         run: |
+          ls | echo
           echo "Packaging extension source..."
           google-chrome --pack-extension='$GITHUB_WORKSPACE/src'
           mv src.crx TubiaBuddy.crx

@@ -118,3 +118,7 @@ web_modules/
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# output files
+*.crx
+*.pem

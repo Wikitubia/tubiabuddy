@@ -1,0 +1,43 @@
+name: Build on Chrome
+
+on:
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  setup_chrome:
+    name: "Set up Chrome"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: "Get latest Chrome version"
+        id: 'get_chrome_version_latest'
+        run: |
+          LATEST_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json | jq -r .channels.Stable.version)
+          echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+          echo "Stable Chrome version: $LATEST_VERSION"
+
+      - name: "Cache Chrome"
+        id: 'cache_chrome'
+        uses: actions/cache@v4.2.4
+        with:
+          path: /opt/google/chrome
+          key: ${{ runner.os }}-google-chrome-${{ steps.get_chrome_version_latest.outputs.version }}
+          restore-keys: |
+            ${{ runner.os }}-google-chrome-
+
+      - name: "Setup Chrome"
+        id: 'setup_chrome'
+        uses: browser-actions/setup-chrome@5f2f9dae94e061474cbfa44c9901c5faee86f8e9
+        with:
+          chrome-version: ${{ steps.get_chrome_version_latest.outputs.version }}
+
+      - name: Verify Chrome installation
+        id: 'verify_chrome_install'
+        run: |
+          echo "Verifying Chrome installation..."
+          google-chrome --version

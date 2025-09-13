@@ -32,7 +32,7 @@ jobs:
 
       - name: "Setup Chrome"
         id: 'setup_chrome'
-        uses: browser-actions/setup-chrome@5f2f9dae94e061474cbfa44c9901c5faee86f8e9
+        uses: browser-actions/setup-chrome@v2.1.0
         with:
           chrome-version: ${{ steps.get_chrome_version_latest.outputs.version }}
 

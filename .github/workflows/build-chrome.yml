@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup_chrome:
+  setup_and_build:
     # name: "Setup and build extension"
     runs-on: ubuntu-latest
     steps:

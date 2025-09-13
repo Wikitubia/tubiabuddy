@@ -21,15 +21,6 @@ jobs:
           echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
           echo "Stable Chrome version: $LATEST_VERSION"
 
-      - name: "Cache Chrome"
-        id: 'cache_chrome'
-        uses: actions/cache@638ed79f9dc94c1de1baef91bcab5edaa19451f4
-        with:
-          path: /opt/google/chrome
-          key: ${{ runner.os }}-google-chrome-${{ steps.get_chrome_version_latest.outputs.version }}
-          restore-keys: |
-            ${{ runner.os }}-google-chrome-
-
       - name: "Setup Chrome"
         id: 'setup_chrome'
         uses: browser-actions/setup-chrome@v2.1.0
@@ -45,9 +36,10 @@ jobs:
       - name: "Package extension source"
         id: 'pack_extension_source'
         run: |
-          ls
+          ls -R
           echo "Packaging extension source..."
           google-chrome --pack-extension='./src'
+          ls -R
           mv src.crx TubiaBuddy.crx
 
       - name: "Upload build artifact"

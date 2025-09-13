@@ -36,10 +36,8 @@ jobs:
       - name: "Package extension source"
         id: 'pack_extension_source'
         run: |
-          ls -R
           echo "Packaging extension source..."
           google-chrome --pack-extension='./src'
-          ls -R
           mv src.crx TubiaBuddy.crx
 
       - name: "Upload build artifact"

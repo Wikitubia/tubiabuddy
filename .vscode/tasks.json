@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "bun: Build dev output",
+			"type": "bun",
+			"script": "scripts/build-dev.ts",
+			"problemMatcher": [],
+			"detail": "Run the development build script, which includes an inline sourcemap",
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": true
+			},
+		},
+		{
+			"type": "bun",
+			"script": "scripts/build.ts",
+			"problemMatcher": [],
+			"label": "bun: Build production output",
+			"detail": "Run the production build script, which will minify the output",
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": true
+			}
+		}
+	]
+}

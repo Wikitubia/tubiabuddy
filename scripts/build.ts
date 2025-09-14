@@ -9,8 +9,10 @@ Bun.build({
 	minify: true
 }).then((output) => {
 	if (output.success) {
-		console.log("Build logs:");
-		console.log(output.logs)
+		if (output.logs.length) {
+			console.log("Build logs:");
+			console.log(output.logs);
+		}
 	} else {
 		console.error("Build failed! Logs:");
 		console.log(output.logs)

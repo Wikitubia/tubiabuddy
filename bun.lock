@@ -31,7 +31,7 @@
 
     "@types/bun": ["@types/bun@1.2.21", "", { "dependencies": { "bun-types": "1.2.21" } }, "sha512-NiDnvEqmbfQ6dmZ3EeUO577s4P5bf4HCTXtI6trMc6f6RzirY5IrF3aIookuSpyslFzrnvv2lmEWv5HyC1X79A=="],
 
-    "@types/chrome": ["@types/chrome@0.1.4", "", { "dependencies": { "@types/filesystem": "*", "@types/har-format": "*" } }, "sha512-vfISO7SPppN3OKVUqWujtZ4vux3nhDqKaHYEHgfQuPARHuWJ3jjyc1s13H0ckzEc86/neTkCl1TeW72UK6jYKA=="],
+    "@types/chrome": ["@types/chrome@0.1.11", "", { "dependencies": { "@types/filesystem": "*", "@types/har-format": "*" } }, "sha512-8KFchpiY51tZaOpojRM9WPkJzr3ZLei1blsR8nkr42XXMKav4GXQgDK/lP1JTP2wsljXhpDDqAsGw9eOgm8G9Q=="],
 
     "@types/filesystem": ["@types/filesystem@0.0.36", "", { "dependencies": { "@types/filewriter": "*" } }, "sha512-vPDXOZuannb9FZdxgHnqSwAG/jvdGM8Wq+6N4D/d80z+D4HWH+bItqsZaVRQykAn6WEVeEkLm2oQigyHtgb0RA=="],
 
@@ -71,7 +71,7 @@
 
     "postcss-value-parser": ["postcss-value-parser@4.2.0", "", {}, "sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ=="],
 
-    "preact": ["preact@10.27.1", "", {}, "sha512-V79raXEWch/rbqoNc7nT9E4ep7lu+mI3+sBmfRD4i1M73R3WLYcCtdI0ibxGVf4eQL8ZIz2nFacqEC+rmnOORQ=="],
+    "preact": ["preact@10.27.2", "", {}, "sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg=="],
 
     "react": ["react@18.3.1", "", { "dependencies": { "loose-envify": "^1.1.0" } }, "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ=="],
 

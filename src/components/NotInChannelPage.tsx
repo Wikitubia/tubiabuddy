@@ -5,7 +5,7 @@
  *
  * @export
  */
-export default function NotInYouTube() {
+export default function NotInChannelPage() {
 	return <div className="not-in-youtube">
 		<p>
 			<b>{ chrome.i18n.getMessage("not_in_channel_page_title") }</b>

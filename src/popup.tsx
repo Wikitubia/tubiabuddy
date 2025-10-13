@@ -1,83 +1,31 @@
 import { signal } from "@preact/signals";
-import { createContext, render } from "preact";
-import { useContext } from "preact/hooks";
+import { render } from "preact";
 
-import { Log } from "./util";
+import { ChannelPageMetadata } from "./scripts/main";
+import { Views } from "./util";
 
-import Header from "src/components/Header";
-import Main from "src/components/Main";
-import NotInChannelPage from "src/components/NotInChannelPage";
-import NotInYouTube from "src/components/NotInYouTube";
-import StatusBar from "src/components/StatusBar";
+import MainView from "./views/MainView";
+import NotYouTubeView from "./views/NotYouTubeView";
+import SettingsView from "./views/SettingsView";
 
-Log.success("Popup loaded!");
+const channelMeta = ChannelPageMetadata.instance;
+export const currentView = signal<Views>(Views.Main);
 
-const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-if (!tab) { Log.error("[popup] Tab not found! This shouldn't happen", new Error("Tab not found!")) };
+if (channelMeta.getChannelURL().origin.startsWith("https://www.youtube.com")) {
+	currentView.value = Views.Main
+} else {
+	currentView.value = Views.NotInYouTube
+};
 
-export const YouTubeURL = createContext(new URL(tab!.url!));
-export const ChromeTab = createContext(tab!);
-export const Status = signal(chrome.i18n.getMessage("status_ready"));
-
-export function App() {
-	const ytUrl = useContext(YouTubeURL);
-
-	/**
-	 * Checks if the given URL is a valid location for execution
-	 *
-	 * @param {URL} url The URL to process
-	 * @returns {boolean}
-	 */
-	function isValidLocation(url: URL): boolean {
-		return (
-			url.hostname.includes("youtube.com")
-		) ? (
-			Log.debug("[popup] In YT"),
-			true
-		) : (
-			Log.debug("[popup] Not in YT"),
-			false
-		)
+function App() {
+	switch (currentView.value) {
+		case Views.Main:
+			return <MainView />
+		case Views.NotInYouTube:
+			return <NotYouTubeView />
+		case Views.Settings:
+			return <SettingsView />
 	}
-
-	/**
-	 * Checks if the given URL is a valid channel page
-	 *
-	 * @param {URL} url The URL to process
-	 * @returns {boolean}
-	 */
-	function isInChannelPage(url: URL): boolean {
-		return (
-			// TODO: centralize + cache this operation
-			url.pathname.startsWith("/@")
-			|| url.pathname.startsWith("/channel/")
-			|| url.pathname.startsWith("/user/")
-		) ? (
-			Log.debug("[popup] In channel page"),
-			true
-		) : (
-			Log.debug("[popup] Not in channel page"),
-			false
-		)
-	}
-
-	Log.debug(`[popup] url: ${ytUrl}`);
-
-	return <>
-		<Header />
-		<YouTubeURL.Provider value={ new URL(tab!.url!) }>
-			{
-				// TODO: do this better
-				(isValidLocation(ytUrl))
-					? (isInChannelPage(ytUrl)
-						? <Main />
-						: <NotInChannelPage />
-					)
-					: <NotInYouTube />
-			}
-		</YouTubeURL.Provider>
-		<StatusBar />
-	</>
 }
 
 render(<App />, document.body);

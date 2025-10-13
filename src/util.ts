@@ -1,5 +1,4 @@
 import logSymbols from "log-symbols";
-import { Status } from "./popup";
 
 /**
  * Promise-based execution delay. Nonblocking
@@ -102,7 +101,7 @@ export const Log = {
 } as const;
 
 /**
- * Simple copy-to-clipboard function with built-in status updating and logging
+ * Simple copy-to-clipboard function
  *
  * @async
  * @param {string} str The string to copy
@@ -115,10 +114,6 @@ export const copyText = async (str: string): Promise<void> => {
 		if (Error.isError(error)) Log.error("[util] Failed to write to clipboard", error);
 	}
 	Log.debug("[util] Copied to clipboard");
-	Status.value = chrome.i18n.getMessage("status_copied_to_clipboard");
-	promiseDelay(1000).then(() => {
-		Status.value = chrome.i18n.getMessage("status_ready");
-	})
 }
 
 /**
@@ -186,4 +181,19 @@ export enum YouTubeChannelURLTypes {
 	User = "/user/ (Template:YouTuber)",
 	Channel = "/channel/ (Template:YouTuber1)",
 	At = "/@ (Template:YouTuber2)"
+}
+
+/**
+ * All the views in the app
+ *
+ * @export
+ * @enum {number}
+ */
+export enum Views {
+	/** The main view */
+	Main,
+	/** The "Not in YouTube" view */
+	NotInYouTube,
+	/** The settings view */
+	Settings
 }

@@ -122,6 +122,8 @@ body {
 		.data-display {
 			font-family: monospace;
 			user-select: all;
+			overflow-x: auto;
+			scrollbar-width: thin;
 		}
 	}
 }

@@ -7,7 +7,7 @@ export class ChannelPageMetadata {
 	private static channelURL: URL
 
 	private constructor() {
-		(currentTab?.url) ? ChannelPageMetadata.channelURL = new URL(currentTab.url) : Log.error("Can't find tab URL!") ;
+		(currentTab?.url) ? ChannelPageMetadata.channelURL = new URL(currentTab.url) : Log.error("Can't find tab URL!");
 	}
 
 	public static get instance(): ChannelPageMetadata {

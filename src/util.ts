@@ -182,3 +182,18 @@ export enum YouTubeChannelURLTypes {
 	Channel = "/channel/ (Template:YouTuber1)",
 	At = "/@ (Template:YouTuber2)"
 }
+
+/**
+ * All the views in the app
+ *
+ * @export
+ * @enum {number}
+ */
+export enum Views {
+	/** The main view */
+	Main,
+	/** The "Not in YouTube" view */
+	NotInYouTube,
+	/** The settings view */
+	Settings
+}
